@@ -2,7 +2,7 @@
 
 #include "OpenDoor.h"
 #include "Gameframework/Actor.h"
-#include "Runtime/Engine/Classes/Engine/World.h"
+#include "Engine/World.h"
 
 // Sets default values for this component's properties
 UOpenDoor::UOpenDoor()
@@ -27,8 +27,8 @@ void UOpenDoor::OpenDoor()
 {
 	// ...
 	auto Owner = GetOwner();
-
-	FRotator OpenRotator = FRotator(0.f, 90.f, 0.f);
+	UE_LOG(LogTemp, Warning, TEXT("Attempting to open Door!"))
+	FRotator OpenRotator = FRotator(0.f, 0.f, 0.f);
 
 	Owner->SetActorRotation(OpenRotator);
 }
